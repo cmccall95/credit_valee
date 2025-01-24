@@ -29,4 +29,17 @@ const initialClients: Client[] = [
   },
 ];
 
+export interface OptionList {
+  id: string;
+  options: string[];
+}
+
+const defaultLists: OptionList[] = [
+  {
+      id: 'paymentFrequency',
+      options: ['Weekly', 'Bi-Weekly', 'Monthly']
+  }
+];
+
 export const clients = writable<Client[]>(initialClients);
+export const optionLists = writable<OptionList[]>(defaultLists);
