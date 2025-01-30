@@ -4,6 +4,7 @@
   import { clients } from '$lib/stores';
   import type { Client, Payment } from '$lib/types';
   import Sidebar from '$lib/components/Sidebar.svelte';
+  import Dashboard from '$lib/components/Dashboard.svelte';
   import ClientForm from '$lib/components/ClientForm.svelte';
   import Reports from '$lib/components/Reports.svelte';
   import { Menu } from 'lucide-svelte';
@@ -99,10 +100,9 @@
   <div class="md:ml-20 p-2 sm:p-4 mt-16 md:mt-0">
     <div class="container max-w-7xl mx-auto">
       {#if activeView === 'home'}
-      <div class="bg-white rounded-lg shadow p-3 sm:p-4 md:p-6">
-        <h1 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4">Welcome to Credit Valee</h1>
-      </div>
+        <Dashboard />
       {/if}
+
 
       {#if activeView === 'client-form'}
       <ClientForm {selectedClient} />

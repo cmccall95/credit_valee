@@ -20,4 +20,5 @@ export interface Client {
     dueIn: number | null;
     clientId: number;
     clientName: string;
+    phoneNumber?: string;
   }
